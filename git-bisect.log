@@ -1,0 +1,152 @@
+git bisect start
+# good: [0adb32858b0bddf4ada5f364a84ed60b196dbcda] Linux 4.16
+git bisect good 0adb32858b0bddf4ada5f364a84ed60b196dbcda
+# bad: [60cc43fc888428bb2f18f08997432d426a243338] Linux 4.17-rc1
+git bisect bad 60cc43fc888428bb2f18f08997432d426a243338
+# good: [ac9053d2dcb9e8c3fa35ce458dfca8fddc141680] Merge tag 'usb-4.17-rc1' of git://git.kernel.org/pub/scm/linux/kernel/git/gregkh/usb
+git bisect good ac9053d2dcb9e8c3fa35ce458dfca8fddc141680
+# good: [38c23685b273cfb4ccf31a199feccce3bdcb5d83] Merge tag 'armsoc-drivers' of git://git.kernel.org/pub/scm/linux/kernel/git/arm/arm-soc
+git bisect good 38c23685b273cfb4ccf31a199feccce3bdcb5d83
+# good: [fbe173e3ffbd897b5a859020d714c0eaf4af2a1a] Merge tag 'rtc-4.17' of git://git.kernel.org/pub/scm/linux/kernel/git/abelloni/linux
+git bisect good fbe173e3ffbd897b5a859020d714c0eaf4af2a1a
+# good: [a1bf4c7da62fcadea065f7c9a561d61c26ea4882] Merge tag 'nfs-for-4.17-1' of git://git.linux-nfs.org/projects/anna/linux-nfs
+git bisect good a1bf4c7da62fcadea065f7c9a561d61c26ea4882
+# skip: [b44c4ddf4a15c42a91a88aaa32b7d53cf43391cb] Merge branch 'clk-davinci' into clk-next
+git bisect skip b44c4ddf4a15c42a91a88aaa32b7d53cf43391cb
+# good: [e31193a9fee0f8008e9718c9d8a6f4c4709f0482] Merge tag 'perf-urgent-for-mingo-4.17-20180409' of git://git.kernel.org/pub/scm/linux/kernel/git/acme/linux into perf/urgent
+git bisect good e31193a9fee0f8008e9718c9d8a6f4c4709f0482
+# good: [a10beabba213924d876f2d10ca9351aeab93f58a] Merge branch 'drm-next-4.17' of git://people.freedesktop.org/~agd5f/linux into drm-next
+git bisect good a10beabba213924d876f2d10ca9351aeab93f58a
+# bad: [f0d98d85831bf1a3b1f56f8c14af60797aaca536] Merge tag 'scsi-fixes' of git://git.kernel.org/pub/scm/linux/kernel/git/jejb/scsi
+git bisect bad f0d98d85831bf1a3b1f56f8c14af60797aaca536
+# skip: [04c0a4e00dc11fedc0b0a8593adcf0f4310505d4] pwm: mediatek: Improve precision in rate calculation
+git bisect skip 04c0a4e00dc11fedc0b0a8593adcf0f4310505d4
+# skip: [726fef09b8018e58f1930fc7bc0a46e8d12ed8c1] clk: ux500: Drop AB8540/9540 support
+git bisect skip 726fef09b8018e58f1930fc7bc0a46e8d12ed8c1
+# skip: [1e04204eff99b520737315af882f7fb61a9443be] clk: renesas: r8a77965: Replace DU2 clock
+git bisect skip 1e04204eff99b520737315af882f7fb61a9443be
+# good: [f7f6d915a10f7f2bce17e3b1b7d3376562395a28] i2c: i801: Restore configuration at shutdown
+git bisect good f7f6d915a10f7f2bce17e3b1b7d3376562395a28
+# skip: [6a4a4595804548e173f0763a0e7274a3521c59a9] clk: mvebu: armada-38x: add support for missing clocks
+git bisect skip 6a4a4595804548e173f0763a0e7274a3521c59a9
+# skip: [0458f403fee348edd3457530dee57c0f946a0df6] watchdog: hpwdt: Programable Pretimeout NMI
+git bisect skip 0458f403fee348edd3457530dee57c0f946a0df6
+# good: [fa697140f9a20119a9ec8fd7460cc4314fbdaff3] syscalls/x86: Use 'struct pt_regs' based syscall calling convention for 64-bit syscalls
+git bisect good fa697140f9a20119a9ec8fd7460cc4314fbdaff3
+# skip: [81c7fcac9b5ffe5744bb1437d991739be7053528] clk: meson: switch gxbb ao_clk to clk_regmap
+git bisect skip 81c7fcac9b5ffe5744bb1437d991739be7053528
+# skip: [c99fc5a352b24397f50e6e71d26d4e95c2cce776] clk: samsung: Add a git tree entry to MAINTAINERS
+git bisect skip c99fc5a352b24397f50e6e71d26d4e95c2cce776
+# good: [affb028071492048ce1d8fa37e5e4236152b02cc] Merge tag 'trace-v4.17-2' of git://git.kernel.org/pub/scm/linux/kernel/git/rostedt/linux-trace
+git bisect good affb028071492048ce1d8fa37e5e4236152b02cc
+# skip: [d0a4027f2789d7682afce2cea066d32c85e3d8c4] watchdog: hpwdt: Modify to use watchdog core.
+git bisect skip d0a4027f2789d7682afce2cea066d32c85e3d8c4
+# skip: [b5beb07ad32ab533027aa988d96a44965ec116f7] apparmor: fix resource audit messages when auditing peer
+git bisect skip b5beb07ad32ab533027aa988d96a44965ec116f7
+# good: [795939a93e600587e52c34fe02402b27ddda6017] ovl: add support for "xino" mount and config options
+git bisect good 795939a93e600587e52c34fe02402b27ddda6017
+# skip: [c77de0e5c95a249fd2d4105dbc619f436ec96345] clk: meson: add gp0 frac parameter for axg and gxl
+git bisect skip c77de0e5c95a249fd2d4105dbc619f436ec96345
+# skip: [039738bf986a516a01e96a4874c172dfe7e66892] clk: renesas: r8a7743: Add rwdt clock
+git bisect skip 039738bf986a516a01e96a4874c172dfe7e66892
+# good: [3e565a351ed3e94352bfbe0be06c659fc8fafb19] Merge branch 'i2c/for-current' of git://git.kernel.org/pub/scm/linux/kernel/git/wsa/linux
+git bisect good 3e565a351ed3e94352bfbe0be06c659fc8fafb19
+# skip: [f175221af35bedf99b201d861a0fe54e19ef36c2] apparmor: rename tctx to ctx
+git bisect skip f175221af35bedf99b201d861a0fe54e19ef36c2
+# skip: [496037c015079ece7ebc1344fcab80f0618eae5e] clk: qcom: gcc-msm8996: Mark aggre0 noc clks as critical
+git bisect skip 496037c015079ece7ebc1344fcab80f0618eae5e
+# good: [11d9ea6f2ca69237d35d6c55755beba3e006b106] nvme-loop: fix kernel oops in case of unhandled command
+git bisect good 11d9ea6f2ca69237d35d6c55755beba3e006b106
+# good: [032900e62c176d75923baf95ad880e5d6ba71171] powerpc/8xx: Fix build with hugetlbfs enabled
+git bisect good 032900e62c176d75923baf95ad880e5d6ba71171
+# good: [4fa8bc949de11c99ee2433c602d43f87c452f4f2] kbuild: rename *-asn1.[ch] to *.asn1.[ch]
+git bisect good 4fa8bc949de11c99ee2433c602d43f87c452f4f2
+# skip: [cef7b18c3e8bd709b6b4b7bb67ceca662aa5f60e] clk: lpc32xx: Set name of regmap_config
+git bisect skip cef7b18c3e8bd709b6b4b7bb67ceca662aa5f60e
+# skip: [3c829f47e33eb0398a9a14e357a05199a7be0277] watchdog: asm9260_wdt: fix error handling in asm9260_wdt_probe()
+git bisect skip 3c829f47e33eb0398a9a14e357a05199a7be0277
+# skip: [75af6fa42dc68b730e85f51034512c61e52eb0c0] clk: sunxi-ng: remove select on obsolete SUNXI_CCU_X kconfig name
+git bisect skip 75af6fa42dc68b730e85f51034512c61e52eb0c0
+# skip: [a042229a18acb0422dca08cf92cf940695b5fcb7] watchdog: hpwdt: Update nmi_panic message.
+git bisect skip a042229a18acb0422dca08cf92cf940695b5fcb7
+# good: [162ee5a8ab49be40d253f90e94aef712470a3a24] x86/mm: Fix bogus warning during EFI bootup, use boot_cpu_has() instead of this_cpu_has() in build_cr3_noflush()
+git bisect good 162ee5a8ab49be40d253f90e94aef712470a3a24
+# skip: [e7c4b02c2642a5ff3704bd86ff23a6a7a0f4e279] dt-bindings: pwm-stm32-lp: Add #pwm-cells
+git bisect skip e7c4b02c2642a5ff3704bd86ff23a6a7a0f4e279
+# skip: [a1d803d78b9e1ff82a0e5ef9d81202b23377f9e0] clk: versatile: Remove WARNs in ->round_rate()
+git bisect skip a1d803d78b9e1ff82a0e5ef9d81202b23377f9e0
+# skip: [58e1e2d2cd89a4aa77212eae64dd4824374e83f4] clk: davinci: cfgchip: Add TI DA8XX USB PHY clocks
+git bisect skip 58e1e2d2cd89a4aa77212eae64dd4824374e83f4
+# skip: [224a63844173944817a7f7b966c14466abd2010f] clk: rockchip: remove HCLK_VIO from rk3328 dt header
+git bisect skip 224a63844173944817a7f7b966c14466abd2010f
+# skip: [989ae7a5b2f965dc5e6de132f1d8c0ea8c23c3c5] pwm: sun4i: Properly check current state
+git bisect skip 989ae7a5b2f965dc5e6de132f1d8c0ea8c23c3c5
+# skip: [94aa8a41f1bc807db78567e7031d75998c166150] clk: meson: remove unnecessary rounding in the pll clock
+git bisect skip 94aa8a41f1bc807db78567e7031d75998c166150
+# skip: [fcf371b3517771589819ffefe2aa16b31f0b0a63] clk: renesas: rza1: Always use readl()/writel()
+git bisect skip fcf371b3517771589819ffefe2aa16b31f0b0a63
+# skip: [1d1dedc2169416198a48cd43cee9bdd1a9c939ac] watchdog: sunxi: allow setting timeout in devicetree
+git bisect skip 1d1dedc2169416198a48cd43cee9bdd1a9c939ac
+# skip: [3fe95e6c68e6258410e85488af9e1b1ff545b831] watchdog: renesas_wdt: Add R-Car Gen2 support
+git bisect skip 3fe95e6c68e6258410e85488af9e1b1ff545b831
+# skip: [51a70dbf689c913ad6e8efc6917aa669bd57d339] clk: rockchip: protect all remaining rk3328 interconnect clocks
+git bisect skip 51a70dbf689c913ad6e8efc6917aa669bd57d339
+# good: [3be3f61d25e04ecf90d65d52fad632af5ba8805b] kernel/kexec_file.c: allow archs to set purgatory load address
+git bisect good 3be3f61d25e04ecf90d65d52fad632af5ba8805b
+# skip: [a339bdf64a7c41a6c88cc7da2eb432c876d5ce19] Merge branches 'clk-stratix10', 'clk-imx', 'clk-bcm', 'clk-cs2000' and 'clk-imx6sll' into clk-next
+git bisect skip a339bdf64a7c41a6c88cc7da2eb432c876d5ce19
+# skip: [d065f2f56522b9240acb8c5ea35e9ee25f1b33e6] apparmor: cleanup, drop unused fn __aa_task_is_confined()
+git bisect skip d065f2f56522b9240acb8c5ea35e9ee25f1b33e6
+# skip: [91927ff6446c281a3aa5cf8875cf7f0853a2bb55] clk: qcom: smd-rpm: Migrate to devm_of_clk_add_hw_provider()
+git bisect skip 91927ff6446c281a3aa5cf8875cf7f0853a2bb55
+# skip: [fc3fcb4ff1960e9f0b72b1d4855f7e0bcf18b7f2] clk: davinci: Remove redundant dev_err calls
+git bisect skip fc3fcb4ff1960e9f0b72b1d4855f7e0bcf18b7f2
+# skip: [071ccc966ba5db1ac8f5c24b0faebb37698f68db] x86/entry/64: Drop idtentry's manual stack switch for user entries
+git bisect skip 071ccc966ba5db1ac8f5c24b0faebb37698f68db
+# bad: [9fb71c2f230df44bdd237e9a4457849a3909017d] Merge branch 'x86-urgent-for-linus' of git://git.kernel.org/pub/scm/linux/kernel/git/tip/tip
+git bisect bad 9fb71c2f230df44bdd237e9a4457849a3909017d
+# skip: [a83fdfae5a25588cc6c4c086e98f03c7270fc37b] Merge branches 'clk-davinci', 'clk-si544', 'clk-rockchip', 'clk-uniphier' and 'clk-ti-flag-fix' into clk-next
+git bisect skip a83fdfae5a25588cc6c4c086e98f03c7270fc37b
+# skip: [3dc6b1ce6861ebf40b68ab4b752a05584a1f99bf] apparmor: make signal label match work when matching stacked labels
+git bisect skip 3dc6b1ce6861ebf40b68ab4b752a05584a1f99bf
+# skip: [b03781920c844486d2f67823ec3153c58116fc1e] Merge branches 'clk-mediatek', 'clk-hisi', 'clk-allwinner', 'clk-ux500' and 'clk-renesas' into clk-next
+git bisect skip b03781920c844486d2f67823ec3153c58116fc1e
+# skip: [179db533c08431f509a3823077549773d519358b] clk: samsung: s3c2410: Fix PLL rates
+git bisect skip 179db533c08431f509a3823077549773d519358b
+# good: [df6f2801f511b07c08c110fe9f047a34cb40286f] kernel/kexec_file.c: move purgatories sha256 to common code
+git bisect good df6f2801f511b07c08c110fe9f047a34cb40286f
+# good: [96a938aa214e965d5b4a2f10443b29cad14289b9] Input: atmel_mxt_ts - remove platform data support
+git bisect good 96a938aa214e965d5b4a2f10443b29cad14289b9
+# skip: [975b7f0fe669c313f925d60d67bce21f109b0f13] watchdog: Add Nuvoton NPCM watchdog driver
+git bisect skip 975b7f0fe669c313f925d60d67bce21f109b0f13
+# skip: [1a2d0914e23aab386f5d5acb689777e24151c2c8] genirq/affinity: Allow irq spreading from a given starting point
+git bisect skip 1a2d0914e23aab386f5d5acb689777e24151c2c8
+# skip: [2e62c4988bbf2b514aa7672c2ee5252531c7155f] watchdog: add SPDX identifiers for watchdog subsystem
+git bisect skip 2e62c4988bbf2b514aa7672c2ee5252531c7155f
+# skip: [9cb12501f38f924567ea7ba10041d32ecd7bf809] dt-bindings: clock: mediatek: add audsys support for MT2701
+git bisect skip 9cb12501f38f924567ea7ba10041d32ecd7bf809
+# skip: [e540c3c901934e23e5eaa9adec8aba1af317220c] apparmor: update MAINTAINERS file git and wiki locations
+git bisect skip e540c3c901934e23e5eaa9adec8aba1af317220c
+# skip: [b1a1ad4b75b876ccf200f2351ae61364bf856613] clk: sunxi-ng: h3: h5: Allow some clocks to set parent rate
+git bisect skip b1a1ad4b75b876ccf200f2351ae61364bf856613
+# skip: [1180b4c757aab5506f1be367000364dd5cf5cd02] apparmor: fix dangling symlinks to policy rawdata after replacement
+git bisect skip 1180b4c757aab5506f1be367000364dd5cf5cd02
+# good: [22b5560195bd66bc43359b71821dc78cc9de56c6] nvme-pci: Separate IO and admin queue IRQ vectors
+git bisect good 22b5560195bd66bc43359b71821dc78cc9de56c6
+# skip: [a12ec8b6536b9eb484627f252d2a460f6b74c585] clk: imx7d: Correct ahb clk parent select
+git bisect skip a12ec8b6536b9eb484627f252d2a460f6b74c585
+# good: [48023102b7078a6674516b1fe0d639669336049d] Merge branch 'overlayfs-linus' of git://git.kernel.org/pub/scm/linux/kernel/git/mszeredi/vfs
+git bisect good 48023102b7078a6674516b1fe0d639669336049d
+# good: [71b8ebbf3d7bee88427eb207ef643f2f6447c625] Merge branch 'sched-urgent-for-linus' of git://git.kernel.org/pub/scm/linux/kernel/git/tip/tip
+git bisect good 71b8ebbf3d7bee88427eb207ef643f2f6447c625
+# good: [6b0a02e86c293c32a50d49b33a1f04420585d40b] Merge branch 'x86-pti-for-linus' of git://git.kernel.org/pub/scm/linux/kernel/git/tip/tip
+git bisect good 6b0a02e86c293c32a50d49b33a1f04420585d40b
+# bad: [c76fc98260751e71c884dc1a18a07e427ef033b5] syscalls/x86: Adapt syscall_wrapper.h to the new syscall stub naming convention
+git bisect bad c76fc98260751e71c884dc1a18a07e427ef033b5
+# bad: [6dc936f175cc6d12a8eb14d29b87e9238e460383] syscalls/x86: Extend register clearing on syscall entry to lower registers
+git bisect bad 6dc936f175cc6d12a8eb14d29b87e9238e460383
+# bad: [ebeb8c82ffaf94435806ff0b686fffd41dd410b5] syscalls/x86: Use 'struct pt_regs' based syscall calling for IA32_EMULATION and x32
+git bisect bad ebeb8c82ffaf94435806ff0b686fffd41dd410b5
+# good: [7303e30ec1d8fb5ca1f07c92d069241c32b2ee1b] syscalls/core: Prepare CONFIG_ARCH_HAS_SYSCALL_WRAPPER=y for compat syscalls
+git bisect good 7303e30ec1d8fb5ca1f07c92d069241c32b2ee1b
+# first bad commit: [ebeb8c82ffaf94435806ff0b686fffd41dd410b5] syscalls/x86: Use 'struct pt_regs' based syscall calling for IA32_EMULATION and x32
